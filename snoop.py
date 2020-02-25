@@ -816,7 +816,7 @@ def main():
         if exists_counter >= 1:
             webbrowser.open(str("file://" + str(dirresults) + "/results/" + str(username) + ".html"))
 # Музыка.
-        playsound('end.wav')
+#        playsound('end.wav')
    
 if __name__ == "__main__":
     main()
