@@ -17,17 +17,17 @@ pool1 = list()
 def get_rank(domain_to_query, dest):
     result = -1
 
-    #Retrieve ranking data via alexa API
+# Получить данные рейтинга через API рейтинг Alexa.
     url = f"http://data.alexa.com/data?cli=10&url={domain_to_query}"
     xml_data = requests.get(url).text
     root = ET.fromstring(xml_data)
     try:
-        #Get ranking for this site.
+# Получить рейтинг для этого сайта.
         dest['rank'] = int(root.find(".//REACH").attrib["RANK"])
     except:
-        #We did not find the rank for some reason.
-        print(f"Error retrieving rank information for '{domain_to_query}'")
-        print(f"     Returned XML is |{xml_data}|")
+# Не находим
+        print(f"Ошибка при получении информации о ранге для '{domain_to_query}'")
+        print(f"     Возвращённый XML |{xml_data}|")
 
     return
 
@@ -35,14 +35,14 @@ parser = ArgumentParser(formatter_class=RawDescriptionHelpFormatter
                         )
 parser.add_argument("--rank","-r",
                     action="store_true",  dest="rank", default=False,
-                    help="Update all website ranks (not recommended)."
+                    help="Обновить все ранги сайта (не рекомендуется)."
                     )
 args = parser.parse_args()
 
 with open("bad_data.json", "r", encoding="utf8") as bad_file:
     data1 = json.load(bad_file)
 
-with open("bad_site.md", "w") as bad_site:
+with open("bad_site.md", "w", encoding="utf8") as bad_site:
     data_length1 = len(data1)
     bad_site.write(f'## Snoop БД Неподдерживаемых сайтов (список), всего — {data_length1} сайт(ов)!\n')
 
@@ -73,13 +73,13 @@ with open("bad_site.md", "w") as bad_site:
 
 sorted_json_data_bad = json.dumps(data1, indent=2, sort_keys=True)
 
-with open("bad_data.json", "w") as bad_file:
+with open("bad_data.json", "w", encoding="utf8") as bad_file:
     bad_file.write(sorted_json_data_bad)
 
 with open("data.json", "r", encoding="utf8") as data_file:
     data = json.load(data_file)
 
-with open("sites.md", "w") as site_file:
+with open("sites.md", "w", encoding="utf8") as site_file:
     data_length = len(data)
     site_file.write(f'## Snoop БД поддерживаемых сайтов (список), всего — {data_length} сайт(ов)!\n')
 
@@ -109,7 +109,7 @@ with open("sites.md", "w") as site_file:
 
 sorted_json_data = json.dumps(data, indent=2, sort_keys=True)
 
-with open("data.json", "w") as data_file:
+with open("data.json", "w", encoding="utf8") as data_file:
     data_file.write(sorted_json_data)
     
 print("\n" "Обновлено, всего —" ,data_length1, "сайта(ов) в чёрном списке")
