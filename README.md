@@ -37,7 +37,7 @@ $ cd ~/snoop
 
 # Установить python3 и python3-pip, если они не установлены
 $ apt update && pkg upgrade && pkg install python libcrypt
-#Возможно, нужно будет доставить ещё: libxml2; libxslt; и clang [Комментарий с Habr-a QtRoS]
+#Возможно, нужно будет доставить ещё: libxml2; libxslt; и clang [Комментарий юзера]
 
 
 # Установить зависимости 'requirements'
@@ -65,7 +65,7 @@ usage: snoop.py [-h] [--donate Y] [--sort Y] [--version] [--verbose]
                 [--unique-tor] [--proxy PROXY_URL] [--proxy_list PROXY_LIST]
                 [--check_proxies CHECK_PROXY] [--csv] [--json JSON_FILE]
                 [--site SITE_NAME] [--timeout --time 9] [--print-found]
-                [--no-color] [--list all] [--update Y]
+                [--no-func] [--list all] [--update Y]
                 USERNAMES [USERNAMES ...]
 
 
