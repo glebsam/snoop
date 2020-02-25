@@ -15,7 +15,7 @@ https://github.com/snooppr/snoop
 Различия смотри
 https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 
-**В базе 425 сайтов, база расширяется**
+**В базе 440 сайтов, база расширяется**
 
 ## Установка Snoop на Android/Termux
 
