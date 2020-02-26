@@ -37,7 +37,7 @@ print ("""
 \___ \  __ \   _ \   _ \  __ \  
       | |   | (   | (   | |   | 
 _____/ _|  _|\___/ \___/  .__/  
-                         _|     \033[37mv1.\033[34m1.1\033[31m_rus\033[0m\n
+                         _|     \033[37mv1.\033[34m1.2\033[31m_rus\033[0m\n
 """)
 
 print ("#Пример:\n cd ~/snoop\n python3 snoop.py -h \033[37m#справка по всем функциям ПО\033[0m\n" + 
@@ -46,7 +46,7 @@ print ("#Пример:\n cd ~/snoop\n python3 snoop.py -h \033[37m#справк�
 
 
 module_name = "Snoop: поиск никнейма по всем фронтам!"
-__version__ = "1.1.1_rus Ветка Android/Termux"
+__version__ = "1.1.2_rus Ветка Android/Termux"
 
 date = datetime.datetime.today()
 
@@ -432,7 +432,6 @@ def update_snoop():
 нажмите 'y' """))
     if upd == "y":
         if sys.platform == 'win32':
-            locale.setlocale(locale.LC_ALL, '')
             print(Fore.RED + "Функция обновления Snoop требует установки <Git> на OS Windows")
             os.startfile("update.bat")
         else:
@@ -559,7 +558,6 @@ def main():
 # Опция сортировки.
     if args.sort:
         if sys.platform == 'win32':
-            locale.setlocale(locale.LC_ALL, '')
             subprocess.run(["python", "site_list.py"])
         else:
             subprocess.run(["python3", "site_list.py"])

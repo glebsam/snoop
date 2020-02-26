@@ -1,5 +1,5 @@
 ##Snoop Project 
-v1.1.1_rus
+v1.1.2_rus
 * Добавлены в БС новые ресурсы:
 
 Barnacl;
