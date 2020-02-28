@@ -15,7 +15,7 @@ https://github.com/snooppr/snoop
 Различия смотри
 https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 
-**В базе 481 сайтов, база расширяется**
+**В базе 493 сайта, база расширяется**
 
 ## Установка Snoop на Android/Termux
 
@@ -134,6 +134,8 @@ optional arguments:
 Для поиска только одного пользователя::
 ```
 python3 snoop.py username1
+# Кириллица поддерживается, например,
+python3 snoop.py олеся
 ```
 
 Для поиска одного и более юзеров:
