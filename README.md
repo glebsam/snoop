@@ -15,7 +15,7 @@ https://github.com/snooppr/snoop
 Различия смотри
 https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 
-**В базе 493 сайта, база расширяется**
+**В базе 500 сайтов, база расширяется**
 
 ## Установка Snoop на Android/Termux
 
@@ -143,7 +143,8 @@ python3 snoop.py олеся
 python3 snoop.py username1 username2 username3
 ```
 
-Найденные учетные записи будут храниться в ~/snoop/results/*/username.{txt.csv.html}
+Найденные учетные записи будут храниться в ~/snoop/results/*/username.{txt.csv.html}.
+Если вы желаете работать с Html, то скопируйте результаты поиска в html из домашней папки в Download, и откройте файл с помощью любого браузера (на Android "обычно" нет доступа браузеров к домашней папке Termux).
 
 Обновляйте Snoop для поддержки ПО и БД в актуальном состоянии:
 ```bash
