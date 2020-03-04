@@ -15,7 +15,7 @@ https://github.com/snooppr/snoop
 Различия смотри
 https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 
-**В базе 500 сайтов, база расширяется**
+**В базе 506 сайтов, база расширяется**
 
 ## Установка Snoop на Android/Termux
 
@@ -65,7 +65,7 @@ usage: snoop.py [-h] [--donate Y] [--sort Y] [--version] [--verbose]
                 [--unique-tor] [--proxy PROXY_URL] [--proxy_list PROXY_LIST]
                 [--check_proxies CHECK_PROXY] [--csv] [--json JSON_FILE]
                 [--site SITE_NAME] [--timeout --time 9] [--print-found]
-                [--no-func] [--list all] [--update Y]
+                [--no-func] [--list all] [--country] [--update Y]
                 USERNAMES [USERNAMES ...]
 
 
@@ -124,10 +124,10 @@ optional arguments:
                         'упавших' сайтов = 9с.
   --print-found         Выводить на печать только найденные аккаунты
   --no-func, -n         ✓Монохромный терминал, не использовать цвета в url
-                        ✓Отключить звук
                         ✓Запретить открытие web browser-a
-                        Отключить звук  
   --list all            Вывод на дисплей БД (БС+ЧС) поддерживаемых сайтов
+  --country, -c         Сортировка 'вывода на печать/запись в html' результатов
+                        по странам, а не по алфавиту  
   --update Y            Обновить Snoop
 ```
 
