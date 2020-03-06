@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 #Copyright (c) 2020 Snoop Project <snoopproject@protonmail.com> 
 
+import certifi
 import csv
 import json
 import locale
@@ -8,6 +9,7 @@ import os
 import platform
 import re
 import requests
+import sortirovka
 import subprocess
 import sys
 import time
@@ -16,11 +18,8 @@ import webbrowser
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from colorama import Fore, Style, init
 from concurrent.futures import ThreadPoolExecutor
-from pathlib import Path
 #from playsound import playsound
 from requests_futures.sessions import FuturesSession
-
-#from playsound import playsound
 
 if sys.platform == 'win32':
     locale.setlocale(locale.LC_ALL, '')
@@ -43,7 +42,7 @@ print ("#Пример:\n cd ~/snoop\n python3 snoop.py -h \033[37m#справк�
 module_name = "Snoop: поиск никнейма по всем фронтам!"
 __version__ = "1.1.3_rus Ветка GNU/Linux"
 
-dirresults = Path.cwd()
+dirresults = os.getcwd()
 timestart = time.time()
 
 class ElapsedFuturesSession(FuturesSession):
@@ -90,7 +89,7 @@ def print_error(err, errstr, var, verbose=False, color=True):
             Fore.WHITE + "]" +
             Fore.RED + f" {errstr}" +
             Fore.YELLOW + f" {err if verbose else var}")
-    #    playsound('err.wav')
+#        playsound('err.wav')
     else:
         print(f"[-] {errstr} {err if verbose else var}")
 
@@ -98,7 +97,7 @@ def print_error(err, errstr, var, verbose=False, color=True):
 def format_response_time(response_time, verbose):
     return " [{} ms]".format(response_time) if verbose else ""
 
-#Вывод на печать, если указан флаг '--country'
+# Вывод на печать, если указан флаг '--country'
 def print_found_country(social_network, url, countryA, response_time=False, verbose=False, color=True):
     if color:
         print(countryA, (Style.BRIGHT +
@@ -107,7 +106,7 @@ def print_found_country(social_network, url, countryA, response_time=False, verb
     else:
         print(f"[+]{format_response_time(response_time, verbose)} {social_network}: {url}")
 
-#Вывод на печать по умолчанию
+# Вывод на печать по умолчанию
 def print_found(social_network, url, response_time=False, verbose=False, color=True):
     if color:
         print((Style.BRIGHT + Fore.WHITE + "[" +
@@ -530,12 +529,9 @@ def main():
     args = parser.parse_args()
     
 
-# Опция сортировки.
+# Опция сортировки
     if args.sort:
-        if sys.platform == 'win32':
-            subprocess.run(["python", "site_list.py"])
-        else:
-            subprocess.run(["python3", "site_list.py"])
+        sortirovka.sorts()
         exit(0)
 
     if args.listing:
@@ -568,7 +564,7 @@ def main():
         print("=======================\nВыход")
         sys.exit(0)
     
-# Проверка остальных аргументов.
+# Проверка остальных опций.
 
     response_json_online = None
     site_data_all = None
