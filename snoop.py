@@ -40,7 +40,7 @@ print ("#Пример:\n cd ~/snoop\n python3 snoop.py -h \033[37m#справк�
 
 
 module_name = "Snoop: поиск никнейма по всем фронтам!"
-__version__ = "1.1.3_rus Ветка GNU/Linux"
+__version__ = "1.1.3_rus Ветка Snoop/Termux"
 
 dirresults = os.getcwd()
 timestart = time.time()
