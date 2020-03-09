@@ -3388,7 +3388,7 @@
   "Rajce": {
     "country": "\ud83c\udde8\ud83c\uddff",
     "errorMsg": "410",
-    "errorMsg2": "<title>Uživatel neexistuje",
+    "errorMsg2": "<title>U\u017eivatel neexistuje",
     "errоrTypе": "message",
     "url": "https://{}.rajce.idnes.cz/",
     "urlMain": "https://www.rajce.idnes.cz/",
