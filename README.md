@@ -21,7 +21,7 @@ https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 | macOS |🚫|
 | IOS |🚫|
 
-**В базе** [519 сайтов](https://github.com/snooppr/snoop/blob/termux/sites.md "database"), **база расширяется**
+**В базе** [535 сайтов](https://github.com/snooppr/snoop/blob/termux/sites.md "database"), **база расширяется**
 
 ## Установка Snoop на Android/Termux
 
