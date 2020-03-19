@@ -32,7 +32,7 @@ print ("""\033[36m
 \___ \  __ \   _ \   _ \  __ \  
       | |   | (   | (   | |   | 
 _____/ _|  _|\___/ \___/  .__/  
-                         _|    \033[0m \033[37mv1.\033[34;1m1.5\033[31;1m_rus\033[0m
+                         _|    \033[0m \033[37mv1.\033[34;1m1.6\033[31;1m_rus\033[0m
 """)
 
 print (Fore.CYAN + "#Пример:" + Style.RESET_ALL)
@@ -42,7 +42,7 @@ print (Fore.CYAN + " python3 snoop.py -t 9 username" + Style.RESET_ALL, "#пои
 
 
 module_name = (Fore.CYAN + "Snoop: поиск никнейма по всем фронтам!" + Style.RESET_ALL)
-__version__ = "1.1.5_rus Ветка Snoop Android/Termux"
+__version__ = "1.1.6_rus Ветка Snoop Android/Termux"
 
 dirresults = os.getcwd()
 timestart = time.time()
