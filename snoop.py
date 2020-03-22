@@ -636,7 +636,7 @@ def main():
                     print(Fore.CYAN + "AU =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇦🇺 ')}", Fore.CYAN + "сайт(а/ов)!")
                     print(Fore.CYAN + "CZ =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇨🇿 ')}", Fore.CYAN + "сайт(а/ов)!")
                     print(Fore.CYAN + "CA =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇨🇦 ')}", Fore.CYAN + "сайт(а/ов)!")
-                    print(Fore.CYAN + "IR =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇮🇪 ')}", Fore.CYAN + "сайт(а/ов)!")
+                    print(Fore.CYAN + "FR =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇫🇷 ')}", Fore.CYAN + "сайт(а/ов)!")
                     print(Fore.CYAN + "...")
                     sys.exit(0)
 #Сортировка для ОС GNU   
@@ -678,7 +678,7 @@ def main():
                 print(Fore.CYAN + "🇦🇺 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇦🇺 ')}", Fore.CYAN + "сайт(а/ов)!")
                 print(Fore.CYAN + "🇨🇿 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇨🇿 ')}", Fore.CYAN + "сайт(а/ов)!")
                 print(Fore.CYAN + "🇨🇦 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇨🇦 ')}", Fore.CYAN + "сайт(а/ов)!")
-                print(Fore.CYAN + "🇮🇪 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇮🇪 ')}", Fore.CYAN + "сайт(а/ов)!")
+                print(Fore.CYAN + "🇫🇷 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇫🇷 ')}", Fore.CYAN + "сайт(а/ов)!")
                 print(Fore.CYAN + "...")
                 sys.exit(0)
 
@@ -716,7 +716,7 @@ def main():
                     print(Fore.CYAN + "AU =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇦🇺 ')}", Fore.CYAN + "сайт(а/ов)!")
                     print(Fore.CYAN + "CZ =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇨🇿 ')}", Fore.CYAN + "сайт(а/ов)!")
                     print(Fore.CYAN + "CA =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇨🇦 ')}", Fore.CYAN + "сайт(а/ов)!")
-                    print(Fore.CYAN + "IR =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇮🇪 ')}", Fore.CYAN + "сайт(а/ов)!")
+                    print(Fore.CYAN + "FR =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇫🇷 ')}", Fore.CYAN + "сайт(а/ов)!")
                     print(Fore.CYAN + "...")
                     sys.exit(0)
 #Сортировка для ОС GNU
@@ -726,7 +726,7 @@ def main():
                 with open('sites.md', "r", encoding="utf8") as listyes:
                     for site in listyes.readlines():
                         patch = (site.split(']')[0]).replace("[", " ")
-                        patch1 = str(patch.split('.')[1:2]).replace("[", "").replace("]", " ").replace("'", "")
+                        patch1 = str(patch.split('.')[1:]).replace("[", "").replace("]", " ").replace("'", "")
                         listall.append(patch1)
                         sortlistall = sorted(listall)
                     print(Fore.GREEN + "++Белый список++")
@@ -761,7 +761,7 @@ def main():
                 print(Fore.CYAN + "🇦🇺 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇦🇺 ')}", Fore.CYAN + "сайт(а/ов)!")
                 print(Fore.CYAN + "🇨🇿 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇨🇿 ')}", Fore.CYAN + "сайт(а/ов)!")
                 print(Fore.CYAN + "🇨🇦 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇨🇦 ')}", Fore.CYAN + "сайт(а/ов)!")
-                print(Fore.CYAN + "🇮🇪 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇮🇪 ')}", Fore.CYAN + "сайт(а/ов)!")
+                print(Fore.CYAN + "🇫🇷 =", Style.BRIGHT + Fore.GREEN + f"{goba.count('🇫🇷 ')}", Fore.CYAN + "сайт(а/ов)!")
                 print(Fore.CYAN + "...")
                 sys.exit(0)
 
@@ -874,6 +874,7 @@ def main():
             exists_counter = 0
             file.write("Адрес | ресурс" + "\n\n")
             for website_name in results:
+                timefinish = time.time() - timestart            
                 dictionary = results[website_name]
                 if dictionary.get("exists") == "найден!":
                     exists_counter += 1
@@ -881,10 +882,9 @@ def main():
             file.write("\n" f"Запрашиваемый объект: <{username}> найден: {exists_counter} раз(а).")
             file.write("\n" f"База Snoop: " + str(flagBS) + " Websites.")
             file.write("\n" f"Обновлено: " + time.strftime("%m/%d/%Y_%H:%M:%S", time_data) + ".")      
-            print(Fore.CYAN + "├─Результаты поиска:", "всего найдено —", exists_counter, "url")
+            print(Fore.CYAN + "├─Результаты поиска:", "найдено -->", exists_counter, "url (%.0f" % float(timefinish) +"sec)")
 
     # Запись в html.
-            timefinish = time.time() - timestart
             file = open("results/html/" + username + ".html", "w", encoding="utf-8")
             try:
                 file = open("results/html/" + username + ".html", "w", encoding="utf-8")
@@ -1016,6 +1016,7 @@ def main():
             exists_counter = 0
             file.write("Адрес | ресурс" + "\n\n")
             for website_name in results:
+                timefinish = time.time() - timestart            
                 dictionary = results[website_name]
                 if dictionary.get("exists") == "найден!":
                     exists_counter += 1
@@ -1023,11 +1024,10 @@ def main():
             file.write("\n" f"Запрашиваемый объект: <{username}> найден: {exists_counter} раз(а).")
             file.write("\n" f"База Snoop: " + str(flagBS) + " Websites.")
             file.write("\n" f"Обновлено: " + time.strftime("%m/%d/%Y_%H:%M:%S", time_data) + ".")
-            print(Fore.CYAN + "├─Результаты поиска:", "всего найдено —", exists_counter, "url")
+            print(Fore.CYAN + "├─Результаты поиска:", "найдено -->", exists_counter, "url (%.0f" % float(timefinish) +"sec)")
 
 
     # Запись в html.
-            timefinish = time.time() - timestart
             file = open("results/html/" + username + ".html", "w", encoding="utf-8")
             try:
                 file = open("results/html/" + username + ".html", "w", encoding="utf-8")
