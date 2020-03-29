@@ -25,39 +25,38 @@ https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 ## Установка Snoop на Android/Termux
 
 **Примечание**: Требуемая версия python 3.6 и выше.
-**Примечание**: Snoop Project стабильно работает даже на самых слабых гаджетах.
+**Примечание**: Snoop Project стабильно работает даже на самых слабых гаджетах.  
 
+# Инсталляция
+Установить [Termux](https://play.google.com/store/apps/details?id=com.termux&hl=en "Google Play")  
 ```bash
-# Работа Snoop на Android-е
-Войти в домашнюю папку Termux (т.е. просто открыть Termux)
+# Войти в домашнюю папку Termux (т.е. просто открыть Termux)
 $ termux-setup-storage
-$ cd /data/data/com.termux/files/home #дефолтный/домашний каталог
+$ ls #/data/data/com.termux/files/home дефолтный/домашний каталог
 
-# Клонировать репозиторий Snoop ветку Termux
-# (Если флешкa FAT — она не пойдет!
-#В таком случае, клонировать репозиторий только в Домашнюю дирректорию Termux)
-$ git clone https://github.com/snooppr/snoop -b termux
-
-# Войти в рабочий каталог
-$ cd ~/snoop
-
-# Установить python3 и python3-pip, если они не установлены
-$ apt update && pkg upgrade && pkg install python libcrypt
-#Возможно, нужно будет доставить ещё: libxml2; libxslt; и clang [Комментарий юзера]
-
-
-# Установить зависимости 'requirements'
+# Установить python3 и зависимости
+# Примечание: установка продолжительная по времени
+$ apt update && pkg upgrade && pkg install python libcrypt libxml2 libxslt git
 $ pip install --upgrade pip
+
+# Клонировать репозиторий Snoop и перейти в ветку Snoop/Termux
+$ git clone https://github.com/snooppr/snoop -b termux
+# (Если флешкa FAT (ни ext4), в таком случае,
+# клонировать репозиторий только в ДОМАШНЮЮ дирректорию Termux)
+
+# Войти в рабочий каталог Snoop
+$ cd ~/snoop
+# Установить зависимости 'requirements'
 $ python3 -m pip install -r requirements.txt
-# Либо установить все зависимости из 'requirements.txt' в ручную через
-$ pip3 install module
 
 
-# Чтобы иметь возможность обновлять Snoop на Android/Termux
+# Дополнение для устаревших гаджетов (Android 6)
+# Примечание на современных гаджетах пакеты уже предустановлены и настроены
 # добавьте любое 'рандомное' имя и почту [^1]:
 $ git config --global user.email "you@example.com"
 $ git config --global user.name "username"
-$ python3 snoop.py --update y
+# Установите coreutils
+$ pkg coreutils
 ```
 **Эта версия Snoop, которая работает на Android/Termux**
 
