@@ -20,7 +20,7 @@ https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 | macOS                 |     🚫    |
 | IOS                   |     🚫    |
 
-**В базе** [7️⃣1️⃣7️⃣ Websites!!!](https://github.com/snooppr/snoop/blob/master/sites.md "database"), **база расширяется**
+**В базе** [7️⃣3️⃣6️⃣ Websites!!!](https://github.com/snooppr/snoop/blob/master/sites.md "database"), **база расширяется**
 
 ## Установка Snoop на Android/Termux
 
@@ -56,7 +56,7 @@ $ python3 -m pip install -r requirements.txt
 $ git config --global user.email "you@example.com"
 $ git config --global user.name "username"
 # Установите coreutils
-$ pkg coreutils
+$ pkg install coreutils
 ```
 **Эта версия Snoop, которая работает на Android/Termux**
 
