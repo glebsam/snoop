@@ -50,7 +50,7 @@ else:
 	print (Fore.CYAN + "=============================================\n" + Style.RESET_ALL)
 
 module_name = (Fore.CYAN + "Snoop: поиск никнейма по всем фронтам!" + Style.RESET_ALL)
-__version__ = "1.1.6_rus Ветка Snoop Android/Termux"
+__version__ = "1.1.7_rus Ветка Snoop Android/Termux"
 
 dirresults = os.getcwd()
 timestart = time.time()
@@ -621,16 +621,38 @@ def main():
         sys.exit(0)
 
 # Опция list all
-# Сортируем по алфавиту (2!)
-#Сортировка для ОС Win
+# Общий вывод стран (3!)
     if args.listing:
         if sys.platform == 'win32':
-            sortY = str(input("Сортировать БС Snoop по странам или по имени сайта ?\nпо странам — 1 по имени — 2\n"))
-        else:       
+            sortY = str(input("Сортировать БС Snoop по странам или по имени сайта ?\nпо странам — 1 по имени — 2 all — 3\n"))
+        else:
             sortY = str(input("\033[36mСортировать БС Snoop по странам или по имени сайта ?\n" + \
-            "по странам —\033[0m 1 \033[36mпо имени —\033[0m 2\n"))
+            "по странам —\033[0m 1 \033[36mпо имени —\033[0m 2 \033[36mall —\033[0m 3\n"))
+        if sortY == "3":
+            print(Fore.CYAN + "========================\nOk, print All Country:\n")
+            with open("data.json", "r", encoding="utf8") as contry0:
+                datajson0 = json.load(contry0)
+                cnt0 = Counter()
+                li0 = []
+                for con0 in datajson0:
+                    if sys.platform == 'win32':
+                        aaa0 = datajson0.get(con0).get("country_klas")
+                    else:
+                        aaa0 = datajson0.get(con0).get("country")
+                    li0.append(aaa0)
+                for word0 in li0:
+                    cnt0[word0] += 1
+                flag_str0=str(cnt0)
+                try:
+                    flag_str_sum0 = (flag_str0.split('{')[1]).replace("'", "").replace("}", "").replace(")", "")
+                except:
+                    pass
+                print(Style.BRIGHT + Fore.GREEN + flag_str_sum0)
+                sys.exit(0)
 
-        if sortY == "2":
+# Сортируем по алфавиту (2!)
+#Сортировка для ОС Win
+        elif sortY == "2":
             if sys.platform == 'win32':
                 print(Fore.CYAN + "========================\nOk, сортируем по алфавиту:\n")
                 print(Fore.GREEN + "++Белый список++")
@@ -1069,7 +1091,6 @@ def main():
                                print_found_only=args.print_found_only,
                                timeout=args.timeout,
                                color=not args.no_func)
-
             exists_counter = 0
             file.write("Адрес | ресурс" + "\n\n")
             for website_name in results:
