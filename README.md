@@ -21,7 +21,7 @@ https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 | IOS                   |     🚫    |
 | WSL                   |     🚫    |
 
-**В базе** [8️⃣0️⃣2️⃣ Websites⚡️⚡️⚡️](https://github.com/snooppr/snoop/blob/master/websites.md "Database Snoop")
+**В базе** [8️⃣1️⃣0️⃣ Websites⚡️⚡️⚡️](https://github.com/snooppr/snoop/blob/master/websites.md "Database Snoop")
 
 ## Установка Snoop на Android/Termux
 
@@ -120,7 +120,7 @@ $ python3 snoop.py username1
 $ python3 snoop.py олеся
 # Для поиска имени, содержащего пробел:
 $ python3 snoop.py "ivan ivanov"
-# (ожидаемые ложные результаты поиска для 'ника с пробелом' ~1,25%).
+# (ожидаемые ложные результаты поиска для 'ника с пробелом' < 1%).
 
 # Для поиска одного и более юзеров:
 $ python3 snoop.py username1 username2 username3 username4
