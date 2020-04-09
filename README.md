@@ -30,7 +30,7 @@ https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 
 # Инсталляция
 Установить [Termux](https://play.google.com/store/apps/details?id=com.termux&hl=en "Google Play")  
-```bash
+```
 # Войти в домашнюю папку Termux (т.е. просто открыть Termux)
 $ termux-setup-storage
 $ ls #/data/data/com.termux/files/home дефолтный/домашний каталог
@@ -63,7 +63,7 @@ $ pkg install coreutils
 
 ## Использование
 
-```bash
+```
 $ python3 snoop.py --help
 
 usage: snoop.py [-h] [--donate Y] [--sort Y] [--version] [--verbose] [--csv]
@@ -113,14 +113,13 @@ optional arguments:
 ```
 
 **Примеры**
-```bash
+```
 # Для поиска только одного пользователя:
 $ python3 snoop.py username1
 # Или, например, кириллица поддерживается:
 $ python3 snoop.py олеся
 # Для поиска имени, содержащего пробел:
 $ python3 snoop.py "ivan ivanov"
-# (ожидаемые ложные результаты поиска для 'ника с пробелом' < 1%).
 
 # Для поиска одного и более юзеров:
 $ python3 snoop.py username1 username2 username3 username4
@@ -139,7 +138,7 @@ $ python3 snoop.py -с -t 9 -f --csv -u ~/file.txt start
 Если вы желаете анализировать результаты Html/CSV, то скопируйте результаты поиска из домашней папки Termux в Download, например, с помощью Total Commander.  
 Откройте файл(ы) с помощью любого web-browser/office (на Android "обычно/root" нет упрощенного доступа программ к домашней папке Termux и пд.).
 
-```bash
+```
 # Обновляйте Snoop для поддержки ПО и БД в актуальном состоянии:
 $ python3 snoop.py --update Y
 [^1]: Требуется установка и лёгкая "настройка" Git.
