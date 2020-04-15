@@ -141,6 +141,8 @@ $ python3 snoop.py --update Y
 [^1]: Требуется установка и лёгкая "настройка" Git.
 ```
 
+<img src="https://raw.githubusercontent.com/snooppr/snoop/termux/images/snoop_run.png" />
+
 **Основные ошибки ложно-положительного_отклика/соединения при поиске username**
 
 
