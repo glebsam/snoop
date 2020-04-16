@@ -25,7 +25,7 @@ https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 
 ## Установка Snoop на Android/Termux
 
-**Примечание**: Требуемая версия python 3.6 и выше.
+**Примечание**: Требуемая версия python 3.7 и выше.
 **Примечание**: Snoop Project стабильно работает даже на самых слабых гаджетах.  
 
 # Инсталляция
