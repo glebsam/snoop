@@ -21,9 +21,9 @@ https://raw.githubusercontent.com/snooppr/snoop/master/changelog.txt
 | IOS                   |     🚫    |
 | WSL                   |     🚫    |
 
-**В базе** [8️⃣9️⃣6️⃣ Websites⚡️⚡️⚡️](https://github.com/snooppr/snoop/blob/master/websites.md "Database Snoop")
+**В базе** [8️⃣9️⃣9️⃣ Websites⚡️⚡️⚡️](https://github.com/snooppr/snoop/blob/master/websites.md "Database Snoop")
 
-## Установка Snoop на Android/Termux
+## Install Snoop for Android/Termux
 
 **Примечание**: Требуемая версия python 3.7 и выше.
 **Примечание**: Snoop Project стабильно работает даже на самых слабых гаджетах.  
@@ -61,7 +61,7 @@ $ pkg install coreutils
 ```
 **Эта версия Snoop, которая работает на Android/Termux**
 
-## Использование
+## Using
 ```
 $ python3 snoop.py --help
 
@@ -109,7 +109,7 @@ optional arguments:
   --update Y            Обновить Snoop
 ```
 
-**Примеры**
+**Example**
 ```
 # Для поиска только одного пользователя:
 $ python3 snoop.py username1
@@ -143,7 +143,7 @@ $ python3 snoop.py --update Y
 
 <img src="https://raw.githubusercontent.com/snooppr/snoop/termux/images/snoop_run.png" />
 
-**Основные ошибки ложно-положительного_отклика/соединения при поиске username**
+**Основные ошибки ложноположительного_отклика/соединения при поиске username**
 
 
 ## Основные ошибки
