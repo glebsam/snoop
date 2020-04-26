@@ -1436,6 +1436,15 @@
     "usernameOFF": "nousermengirl1945",
     "usernameON": "david"
   },
+  "Chaturbate": {
+    "country": "\ud83c\udf0e",
+    "country_klas": "Wr",
+    "errоrTypе": "status_code",
+    "url": "https://chaturbate.com/{}/",
+    "urlMain": "https://chaturbate.com",
+    "usernameOFF": "nousermengirl1945",
+    "usernameON": "blue"
+  },
   "Cheezburger": {
     "country": "\ud83c\uddfa\ud83c\uddf8",
     "country_klas": "US",
@@ -9079,6 +9088,15 @@
     "usernameOFF": "nousermengirl1945",
     "usernameON": "adam"
   },
+  "Thebigboss": {
+    "country": "\ud83c\udfc1",
+    "country_klas": "Kb",
+    "errоrTypе": "status_code",
+    "url": "http://thebigboss.org/author/{}",
+    "urlMain": "http://thebigboss.org",
+    "usernameOFF": "nousermengirl1945",
+    "usernameON": "adam"
+  },
   "Thechive": {
     "country": "\ud83c\uddfa\ud83c\uddf8",
     "country_klas": "US",
@@ -10179,6 +10197,15 @@
     "urlMain": "https://music.yandex.ru",
     "usernameOFF": "nousermengirl1945",
     "usernameON": "boss"
+  },
+  "YandexSoberu": {
+    "country": "\ud83c\udf0e",
+    "country_klas": "Wr",
+    "errоrTypе": "status_code",
+    "url": "https://yasobe.ru/na/{}",
+    "urlMain": "https://yasobe.ru",
+    "usernameOFF": "nousermengirl1945",
+    "usernameON": "snoop_project"
   },
   "Yapisal": {
     "country": "\ud83c\uddf9\ud83c\uddf7",
